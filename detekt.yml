@@ -1,0 +1,176 @@
+failFast: true
+
+test-pattern: # Configure exclusions for test sources
+  patterns: # Test file regexes
+    - '.*/test/.*'
+  exclude-rule-sets:
+    - 'comments'
+  exclude-rules:
+    - 'NamingRules'
+    - 'MagicNumber'
+    - 'MaxLineLength'
+    - 'LateinitUsage'
+    - 'StringLiteralDuplication'
+    - 'ThrowingExceptionsWithoutMessageOrCause'
+    - 'TooManyFunctions'
+    - 'LargeClass'
+    - 'LongMethod'
+
+comments:
+  CommentOverPrivateFunction:
+    active: false
+  CommentOverPrivateMethod:
+    active: false
+  CommentOverPrivateProperty:
+    active: false
+  EndOfSentenceFormat:
+    active: false
+  NoDocOverPublicClass:
+    active: false
+  NoDocOverPublicMethod:
+    active: false
+  UndocumentedPublicClass:
+    active: false
+  UndocumentedPublicFunction:
+    active: false
+
+complexity:
+  ComplexCondition:
+    threshold: 3
+  ComplexMethod:
+    threshold: 15
+  ComplexInterface:
+      threshold: 20
+  LabeledExpression:
+      active: false
+  LongMethod:
+    threshold: 20
+  LongParameterList:
+    threshold: 6
+  LargeClass:
+    threshold: 200
+  NestedBlockDepth:
+    threshold: 5
+  StringLiteralDuplication:
+    active: false
+  TooManyFunctions:
+    threshold: 26
+
+empty-blocks:
+  EmptyDefaultConstructor:
+      active: false
+  EmptyFunctionBlock:
+      active: false
+  EmptyClassBlock:
+      active: true
+
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
+  NotImplementedDeclaration:
+    active: false
+
+potential-bugs:
+  LateinitUsage:
+    active: false
+  UnsafeCast:
+    active: false
+  UnsafeCallOnNullableType:
+    active: false
+
+formatting:
+  Indentation:
+    active: true
+  NoBlankLineBeforeRbrace:
+    active: true
+  NoMultipleSpaces:
+    active: true
+  NoConsecutiveBlankLines:
+    active: true
+  NoSemicolons:
+    active: true
+  NoTrailingSpaces:
+    active: true
+  NoUnusedImports:
+    active: true
+  NoWildcardImports:
+    active: false
+  SpacingAroundOperators:
+    active: true
+  SpacingAroundCurly:
+    active: true
+  SpacingAroundParens:
+    active: true
+
+naming:
+  PackageNaming:
+    active: true
+    packagePattern: '^[a-z]+(\.[a-z][a-z0-9]*)*$'
+  ClassNaming:
+    active: true
+    classPattern: '[A-Z$][a-zA-Z0-9$]*'
+  EnumNaming:
+    active: true
+    enumEntryPattern: '^[A-Z$][a-zA-Z_$]*$'
+    FunctionNaming:
+    active: true
+    functionPattern: '^([a-z$][a-zA-Z$0-9]*)|(`.*`)$'
+  ConstantNaming:
+    active: false
+  MatchingDeclarationName:
+    active: true
+    
+
+style:
+  DataClassContainsFunctions:
+    active: false
+  ForbiddenComment:
+    active: false
+  FunctionMaxLength:
+    active: false
+  FunctionMinLength:
+    active: false
+  MagicNumber:
+    active: false
+  MaxLineLength:
+    active: false
+  ModifierOrder:
+    active: false
+  ExpressionBodySyntax:
+    active: false
+  NewLineAtEndOfFile:
+    active: true
+  NoTabs:
+    active: true
+  OptionalUnit:
+    active: true
+  OptionalWhenBraces:
+    active: true
+  PackageDeclarationStyle:
+    active: false
+  ReturnCount:
+    active: false
+  TrailingWhitespace:
+    active: true
+  UnnecessaryAbstractClass:
+    active: false
+  UnusedImports:
+    active: true
+  UnusedPrivateClass:
+    active: true
+  UnusedPrivateMember:
+    active: true
+  UnnecessaryParentheses:
+    active: false
+  UseDataClass:
+    active: false
+  VariableMaxLength:
+    active: false
+  VariableMinLength:
+    active: false
+  WildcardImport:
+    active: true
+
+performance:
+  SpreadOperator:
+    active: false
